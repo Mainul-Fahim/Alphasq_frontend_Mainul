@@ -1,12 +1,15 @@
 import React from 'react';
 
-const Movie = () => {
+const Movie = ({movie}) => {
+
+    const {original_title,poster_path,popularity} = movie;
+
     return (
         <div className="bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5">
-            <img src="https://source.unsplash.com/random/300x300" alt="robots" />
+            <img height="300" width="300" src={`https://image.tmdb.org/t/p/original/${poster_path}?200x200`} alt="robots" />
             <div>
-                <h2>RushoMon</h2>
-                <p>Rating : 9.5/10</p>
+                <h2>{original_title}</h2>
+                <p>Popularity: {popularity}</p>
             </div>
         </div>
     );
