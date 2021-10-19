@@ -36,8 +36,8 @@ const Home = () => {
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
     return (
-        <main className="tc white">
-            <h1 className="mt-3 dim i underline">Movies</h1>
+        <main className="tc">
+            <h1 className="mt-3 dim i underline white">Movies</h1>
             <SearchBar advancedSearchChange={advancedSearchChange} />
             <MovieList newMovies={currentPosts}  searchedMovies={searchedMovies} />
             <Pagination
