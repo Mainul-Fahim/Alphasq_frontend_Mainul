@@ -1,6 +1,10 @@
 import React from 'react';
+import useSearch from '../../hooks/useSearch';
 
-const SearchBar = ({searchChange}) => {
+const SearchBar = () => {
+    
+    const {searchChange} = useSearch({});
+    //console.log(filterMovies);
     return (
         <div className="pa2">
           <input
