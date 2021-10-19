@@ -1,11 +1,8 @@
 import React from 'react';
-import useMovies from '../../hooks/useMovies';
 import Movie from '../Movie/Movie';
 
 const MovieList = ({searchedMovies,newMovies}) => {
     
-    const [movies] = useMovies([]);
-  
     
     return (
         <>
