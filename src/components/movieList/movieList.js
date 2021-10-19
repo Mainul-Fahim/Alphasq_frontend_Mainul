@@ -2,7 +2,7 @@ import React from 'react';
 import useMovies from '../../hooks/useMovies';
 import Movie from '../Movie/Movie';
 
-const MovieList = ({searchedMovies}) => {
+const MovieList = ({searchedMovies,newMovies}) => {
     
     const [movies] = useMovies([]);
   
@@ -10,7 +10,7 @@ const MovieList = ({searchedMovies}) => {
     return (
         <>
           {
-            searchedMovies?searchedMovies.map(movie=><Movie key={movie.id} movie={movie}></Movie>) : movies.map(movie=><Movie key={movie.id} movie={movie}></Movie>)
+            searchedMovies?searchedMovies.map(movie=><Movie key={movie.id} movie={movie}></Movie>) : newMovies.map(movie=><Movie key={movie.id} movie={movie}></Movie>)
           } 
         </>
     );
