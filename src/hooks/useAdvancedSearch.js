@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import MovieList from '../../components/MovieList/MovieList';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import  { useEffect, useState } from 'react';
 
-const Home = () => {
+const useAdvancedSearch = () => {
     
     const [searchedMovies,setSearchedMovies] = useState([]);
     const [searchField,setSearchField] = useState('');
@@ -21,15 +19,9 @@ const Home = () => {
 
     },[searchField])
     
-    
-    
-    return (
-        <main className="tc">
-            <h1>Movies</h1>
-            <SearchBar advancedSearchChange={advancedSearchChange}/>
-            <MovieList searchedMovies={searchedMovies}/>
-        </main>
-    );
+    console.log(searchedMovies);
+    return   [searchedMovies];
+      
 };
 
-export default Home;
+export default useAdvancedSearch;

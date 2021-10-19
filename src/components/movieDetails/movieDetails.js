@@ -12,7 +12,7 @@ const MovieDetails = (props) => {
     },[props.movieId])
     
     return (
-        <>
+        
             <Modal
             {...props}
             size="lg"
@@ -20,26 +20,26 @@ const MovieDetails = (props) => {
             centered
         >
             <Modal.Header closeButton>
-                <Modal.Title id="contained-modal-title-vcenter">
-                    {details.original_title}
-                </Modal.Title>
+                
+                   <h4>{details.original_title} </h4> 
+               
             </Modal.Header>
             <Modal.Body>
                 <h4>Overview</h4>
-                <p>
+                <p className="secondary">
                     {details.overview}
                 </p>
-                <small>Release Date: {details.release_date}</small>
+                <small> <strong>Release Date: </strong> {details.release_date}</small>
                 <br />
-                <small>Revenue: {details.revenue}</small>
+                <small> <strong> Revenue: </strong> {details.revenue}</small>
                 <br />
-                <small>Runtime: {details.runtime}</small>
+                <small> <strong> Runtime: </strong> {details.runtime}</small>
             </Modal.Body>
             <Modal.Footer>
                 <Button onClick={props.onHide}>Close</Button>
             </Modal.Footer>
         </Modal>
-        </>
+        
     );
 };
 
